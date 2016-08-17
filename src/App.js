@@ -17,11 +17,14 @@ class App extends Component {
                     <h2>Welcome to React</h2>
                 </div>
 
-                {this.state.layouts.map((Layout, index) => {
-                    return <div>
-                        <Layout key={index} layout={Layout}><p>Rendered in {Layout}</p></Layout>
-                        <hr/>
-                    </div>
+                {this.state.layouts.map((layout, index) => {
+                    let jsxdot = {layout};
+                    return (
+                        <div>
+                            <jsxdot.layout key={index}><p>Rendered in {layout}</p></jsxdot.layout>
+                            <hr/>
+                        </div>
+                    );
                 })};
 
             </div >
